@@ -71,25 +71,15 @@ function exp() {
   current_index=$(find "$dir" -name '*.patch' -printf "%f\n" | sed 's/\([0-9]\+\).*/\1/g' |
     sort -n | tail -1)
   ((current_index++))
+  # Format the index as octal so that no conversion takes place.
+  current_index_str=$(printf "%04o" "$current_index")
 
   echo "Exporting patches from commits $start_c_sha to $end_c_sha."
-  local new_patches
-  if ! new_patches=$(git "${common_git_args[@]}" format-patch -o "$dir" -N \
-    "${revision_range[@]}"); then
+  if ! git "${common_git_args[@]}" format-patch -o "$dir" -N --start-number "$current_index_str" \
+    "${revision_range[@]}"; then
     echo "Error: Unable to export patches."
     return 1
   fi
-
-  # Use octal so that no conversion takes place. A little weird, but eh.
-  printf "Renaming patch files to start with index %04o.\n" "$current_index"
-  while IFS= read -r patch; do
-    current_index_str=$(printf "%04o" "$current_index")
-    # shellcheck disable=2001
-    patch_new=$(echo "$patch" | sed "s/[0-9]\+\(.*\)/$current_index_str\1/g")
-    echo "$(basename "$patch") -> $(basename "$patch_new")"
-    mv "$patch" "$patch_new"
-    ((current_index++))
-  done <<<"$new_patches"
 }
 
 # Entrypoint for patchmgr. Runs the specified subcommand function.
