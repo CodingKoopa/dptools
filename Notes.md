@@ -1,10 +1,3 @@
-
-## Main Loop
-- ABXY: Soft reset.
-
-## Memory Allocation
-Generally, DS games have the ARM9 binary loaded into RAM, then the overlays, and then the rest of the RAM is dedicated to the arena, used for dynamic memory allocation. Pokémon Diamond has a system for managing overlays, but the way it uses the arena is a little different.
-
 ## Message Data
 The source message data for this game is found in `pm_dp_ose/convert/message/src`, in XML files with the extension `gmm`.
 
@@ -18,6 +11,7 @@ GMM files start with:
   - There are no references to anything like this online that make sense in the context of a message editor. This is likely terminology internal to GameFreak.
 
 #### Body
+This section documents the body of the GMM file, in the `body` element.
 
 ##### Boilerplate
 Every GMM file seems to have the same boilerplate:
