@@ -1,0 +1,64 @@
+From a1b9658fb513c7c997f0479afa76205d02eec437 Mon Sep 17 00:00:00 2001
+From: Koopa <codingkoopa@gmail.com>
+Date: Sat, 1 Aug 2020 23:17:59 -0400
+Subject: [PATCH] Remove broken backslashes.
+
+---
+ pm_dp_ose/make_g3_files                           | 8 ++++----
+ pm_dp_ose/src/data/make_g3map_files               | 2 +-
+ pm_dp_ose/src/fielddata/build_model/g3_build      | 2 +-
+ pm_dp_ose/src/fielddata/land_data/land_model_list | 2 +-
+ 4 files changed, 7 insertions(+), 7 deletions(-)
+
+diff --git a/pm_dp_ose/make_g3_files b/pm_dp_ose/make_g3_files
+index 76c772611..c4778b665 100755
+--- a/pm_dp_ose/make_g3_files
++++ b/pm_dp_ose/make_g3_files
+@@ -52,12 +52,12 @@ G3D_IMD = 	$(DATASRC)/billboad.imd \
+ 			$(DATASRC)/red_waku.imd \
+ 			$(DATASRC)/h_exit.imd \
+ 			$(DATASRC)/earth_mark.imd \
+-			$(DATASRC)/test_naminori.imd \
++			$(DATASRC)/test_naminori.imd
+ 			
+ #----IMT定義はモデリングデータだけ取り出したいIMDファイルを書き込む（なのでG3D_IMDと名前が重なってはいけない）
+ G3D_IMT =
+ 
+ #----IMT定義はテクスチャデータだけ取り出したいIMDファイルを書き込む
+ G3D_TX_IMD =	$(DATASRC)/minimum.imd \
+ 			$(DATASRC)/minirhana.imd \
+ 			$(DATASRC)/miniasasea.imd \
+diff --git a/pm_dp_ose/src/data/make_g3map_files b/pm_dp_ose/src/data/make_g3map_files
+index bf9406a41..e20d86211 100755
+--- a/pm_dp_ose/src/data/make_g3map_files
++++ b/pm_dp_ose/src/data/make_g3map_files
+@@ -597,5 +597,5 @@ G3D_GROUND = \
+ 	$(DATASRC)/ugmap13c.imd \
+ 	$(DATASRC)/ugmap14c.imd \
+ 	$(DATASRC)/ugmap15c.imd \
+-	$(DATASRC)/ugmap16c.imd \
++	$(DATASRC)/ugmap16c.imd
+ 
+diff --git a/pm_dp_ose/src/fielddata/build_model/g3_build b/pm_dp_ose/src/fielddata/build_model/g3_build
+index eb62522ea..f5dcd6b33 100755
+--- a/pm_dp_ose/src/fielddata/build_model/g3_build
++++ b/pm_dp_ose/src/fielddata/build_model/g3_build
+@@ -271,4 +271,4 @@ G3D_IMD	= \
+ 	$(DATASRC)/sofa01_r.imd \
+ 	$(DATASRC)/sofa02_d.imd \
+ 	$(DATASRC)/win_sch.imd \
+-	$(DATASRC)/ug_iwa.imd \
++	$(DATASRC)/ug_iwa.imd
+diff --git a/pm_dp_ose/src/fielddata/land_data/land_model_list b/pm_dp_ose/src/fielddata/land_data/land_model_list
+index a3104dad2..84632b4d4 100755
+--- a/pm_dp_ose/src/fielddata/land_data/land_model_list
++++ b/pm_dp_ose/src/fielddata/land_data/land_model_list
+@@ -588,4 +588,4 @@ G3D_IMD	= \
+ 	$(DATASRC)/ugmap13c.imd \
+ 	$(DATASRC)/ugmap14c.imd \
+ 	$(DATASRC)/ugmap15c.imd \
+-	$(DATASRC)/ugmap16c.imd \
++	$(DATASRC)/ugmap16c.imd
+-- 
+2.28.0
+

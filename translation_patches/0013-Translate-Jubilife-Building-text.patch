@@ -1,0 +1,40 @@
+From 2488bad98ab86ab73e99bbd2de6b948653a1588a Mon Sep 17 00:00:00 2001
+From: Koopa <codingkoopa@gmail.com>
+Date: Fri, 14 Aug 2020 19:57:42 -0400
+Subject: [PATCH] Translate Jubilife Building text.
+
+---
+ pm_dp_ose/convert/message/src/scenario/t03r0201.gmm | 10 ++++------
+ 1 file changed, 4 insertions(+), 6 deletions(-)
+
+diff --git a/pm_dp_ose/convert/message/src/scenario/t03r0201.gmm b/pm_dp_ose/convert/message/src/scenario/t03r0201.gmm
+index 24e8537b2..85a6c4946 100755
+--- a/pm_dp_ose/convert/message/src/scenario/t03r0201.gmm
++++ b/pm_dp_ose/convert/message/src/scenario/t03r0201.gmm
+@@ -272,9 +272,8 @@
+ 	<row id="msg_t03r0201_middleman1_01">
+ 		<comment>♂</comment>
+ 		<attribute name="キャラ指定">おじさん</attribute>
+-		<language name="日本語" width="216">ポケモンの　なかには
+-あまいミツの　かおりに　さそわれて▼
+-あらわれる　やつも　いるそうだよ</language>
++		<language name="日本語" width="216">You know, some Pokémon turn up at the
++scent of sweet honey.</language>
+ 	</row>
+ 
+ 	<row id="msg_t03r0201_middlewoman1_01">
+@@ -282,9 +281,8 @@
+ 
+ ※おじさんよりも入り口から遠くに配置</comment>
+ 		<attribute name="キャラ指定">おばさん</attribute>
+-		<language name="日本語" width="216">あまいミツ　といっても
+-はなのミツ　ではなくて▽
+-きのミツ　らしいけどね！</language>
++		<language name="日本語" width="216">I heard it's not called "sweet honey"
++but "honey of the tree"!</language>
+ 	</row>
+ 
+ 	<flowchart-group-list>
+-- 
+2.28.0
+

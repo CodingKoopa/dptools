@@ -1,0 +1,48 @@
+From 6330e7dacd184e5502f95b4ad5192a0ec1d546c6 Mon Sep 17 00:00:00 2001
+From: Koopa <codingkoopa@gmail.com>
+Date: Mon, 3 Aug 2020 17:59:07 -0400
+Subject: [PATCH] =?UTF-8?q?Translate=20Pok=C3=A9mon=20names.?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ pm_dp_ose/convert/message/src/monsname.gmm | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+diff --git a/pm_dp_ose/convert/message/src/monsname.gmm b/pm_dp_ose/convert/message/src/monsname.gmm
+index 2c4f36f62..3afe8e8bf 100755
+--- a/pm_dp_ose/convert/message/src/monsname.gmm
++++ b/pm_dp_ose/convert/message/src/monsname.gmm
+@@ -1694,23 +1694,23 @@
+ 	</row>
+ 
+ 	<row id="MONSNAME_402">
+-		<language name="日本語">ナエガメ</language>
++		<language name="日本語">Turtwig</language>
+ 	</row>
+ 
+ 	<row id="MONSNAME_403">
+-		<language name="日本語">ヒノコザル</language>
++		<language name="日本語">Chimchar</language>
+ 	</row>
+ 
+ 	<row id="MONSNAME_404">
+-		<language name="日本語">ウミオウジ</language>
++		<language name="日本語">Piplup</language>
+ 	</row>
+ 
+ 	<row id="MONSNAME_405">
+-		<language name="日本語">ツボミー</language>
++		<language name="日本語">Budew</language>
+ 	</row>
+ 
+ 	<row id="MONSNAME_406">
+-		<language name="日本語">ムクドリ</language>
++		<language name="日本語">Starly</language>
+ 	</row>
+ 
+ 	<row id="MONSNAME_407">
+-- 
+2.28.0
+

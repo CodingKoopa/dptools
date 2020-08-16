@@ -1,0 +1,104 @@
+From 8ef1ba9ba461882b6c6d25a62bfaf2388b338895 Mon Sep 17 00:00:00 2001
+From: Koopa <codingkoopa@gmail.com>
+Date: Fri, 14 Aug 2020 19:57:08 -0400
+Subject: [PATCH] Translate Rowan's Lab text.
+
+---
+ .../convert/message/src/scenario/t02r0101.gmm | 57 +++++++------------
+ 1 file changed, 22 insertions(+), 35 deletions(-)
+
+diff --git a/pm_dp_ose/convert/message/src/scenario/t02r0101.gmm b/pm_dp_ose/convert/message/src/scenario/t02r0101.gmm
+index b69120a87..6c96a9a3f 100755
+--- a/pm_dp_ose/convert/message/src/scenario/t02r0101.gmm
++++ b/pm_dp_ose/convert/message/src/scenario/t02r0101.gmm
+@@ -271,14 +271,11 @@
+ 
+ ※今回はテキストのみの処理</comment>
+ 		<attribute name="キャラ指定">ポケモン博士</attribute>
+-		<language name="日本語" width="216">はかせ『ウォッホン！▼
+-[1:03:トレーナー名:0]
+-これが　ポケモンずかん　だ▼
+-ポケモンと　であうだけで
+-その　ポケモンの　なまえなどが▽
+-きろく　されていく　すぐれものだ▼
+-これを　[1:03:トレーナー名:0]
+-おまえに　わたすぞ！</language>
++		<language name="日本語" width="216">Lucas, allow me to explain to you what
++the Pokédex does. You see, every time▼
++you run into a Pokémon, its information
++will be registered. It's really an▼
++amazing device!</language>
+ 	</row>
+ 
+ 	<row id="msg_t02r0101_doctor_02">
+@@ -286,12 +283,9 @@
+ 
+ ポケモン図鑑入手処理後に表示</comment>
+ 		<attribute name="キャラ指定">ポケモン博士</attribute>
+-		<language name="日本語" width="216">はかせ『キミの　おとうさんに
+-てつだって　もらいたかったが▼
+-かれには　みずうみの　かんしをする
+-しごとが　あるからな▼
+-そこで　キミに　たのんだ！
+-という　わけ　なのだよ</language>
++		<language name="日本語" width="216">I was hoping to get your father
++to help you, but he has his job with the▼
++water, so I'm asking you.</language>
+ 	</row>
+ 
+ 	<row id="msg_t02r0101_doctor_03">
+@@ -301,37 +295,30 @@
+ msg_t02r0101_doctor_02表示後に
+ 話しかけると表示</comment>
+ 		<attribute name="キャラ指定">ポケモン博士</attribute>
+-		<language name="日本語" width="216">はかせ『ポケモンと　いっしょに
+-２０１ばん　どうろを　あるいたとき▽
+-どんな　きもち　だった？▼
+-ワシはな　うまれて　７０ねん
+-いまだに　ポケモンと　いっしょに▽
+-いるだけで　ドキドキ　する▼
+-いいか？　せかいには　とても
+-たくさんの　ポケモンが　いる！▼
+-つまり　それだけ
+-たくさんの　ドキドキが　まっている！▼
+-さあ　いきたまえ！▼
+-いま　[1:03:トレーナー名:0]の
+-ぼうけんが　はじまるのだ！</language>
++		<language name="日本語" width="216">So, tell me, what was your feeling when
++you walked through Route 201 for the▼
++first time? I'm 70 years old, and I
++still get a thrill just being with▼
++Pokémon. There's so many of them in the
++world!▼
++Those are all the words I have for you.
++Now, come on, Lucas, it's time for your▼
++adventure to begin!</language>
+ 	</row>
+ 
+ 	<row id="msg_t02r0101_assistm1_01">
+ 		<comment>♂</comment>
+ 		<attribute name="キャラ指定">助手</attribute>
+-		<language name="日本語" width="216">ポケモンは　ほんとうに
+-ふしぎな　いきもの　です▼
+-いろいろ　けんきゅう　されていますが
+-まだまだ　なぞが　おおくて▽
+-わかっていないこと　ばかり　です</language>
++		<language name="日本語" width="216">Pokémon are such mysterious creatures,
++there's still so much we don't know▼
++about them.</language>
+ 	</row>
+ 
+ 	<row id="msg_t02r0101_assistw1_01">
+ 		<comment>♀</comment>
+ 		<attribute name="キャラ指定">助手</attribute>
+-		<language name="日本語" width="216">はかせは　カントーの　はかせと
+-きょうりょく　して▽
+-ポケモンずかんを　つくったんです！</language>
++		<language name="日本語" width="216">Professor Rowan worked with a professor
++from Kanto to create the Pokédex.</language>
+ 	</row>
+ 
+ 	<row id="msg_t02r0101_oldwoman1a_01">
+-- 
+2.28.0
+

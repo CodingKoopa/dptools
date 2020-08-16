@@ -1,0 +1,194 @@
+From 957f0e13d4651c78b464fa076dd59e4772964b91 Mon Sep 17 00:00:00 2001
+From: Koopa <codingkoopa@gmail.com>
+Date: Fri, 14 Aug 2020 19:48:12 -0400
+Subject: [PATCH] Translate Lake Verity text.
+
+---
+ .../convert/message/src/scenario/d27r0101.gmm | 93 ++++++++-----------
+ 1 file changed, 41 insertions(+), 52 deletions(-)
+
+diff --git a/pm_dp_ose/convert/message/src/scenario/d27r0101.gmm b/pm_dp_ose/convert/message/src/scenario/d27r0101.gmm
+index 11dbb37ba..3b3bd7f79 100755
+--- a/pm_dp_ose/convert/message/src/scenario/d27r0101.gmm
++++ b/pm_dp_ose/convert/message/src/scenario/d27r0101.gmm
+@@ -281,8 +281,8 @@
+ 博士と再会。
+ posを踏むとイベント開始。</comment>
+ 		<attribute name="キャラ指定">ポケモン博士</attribute>
+-		<language name="日本語" width="216">うん……
+-おまえさんは……？▼</language>
++		<language name="日本語" width="216">Ah, are you...?
++...▼</language>
+ 	</row>
+ 
+ 	<row id="msg_d27r0101_doctor_02" text-color="#000000,,,#000000,,#000000,#000000,#000000,,,#000000,#000000,">
+@@ -294,13 +294,11 @@ posを踏むとイベント開始。</comment>
+ 表示後、ポケモンに図鑑をとられる演出。
+ とられたとき、博士、主人公に！マーク。
+ 演出後、msg_d27r0101_doctor_01表示。</comment>
+-		<language name="日本語" width="216">おお！
+-それは　ポケモンずかん！▼
+-そうか　さきほど
+-ぶつかったときに　おとしたのか▼
+-わざわざ　さがしてまで
+-とどけてくれる　とは　かんしん▽
+-ありがたい　ことだ！</language>
++		<language name="日本語" width="216">Oh!
++Those are my Pokémon!▼
++I must have dropped the case when
++bumping into you earlier. ▼
++Thank goodness you have them!</language>
+ 	</row>
+ 
+ 	<row id="msg_d27r0101_dummy_01" text-color="#000000,,,,,,,#000000,,,#000000,#000000," back-color="#8080ff,,,#8080ff,,#8080ff,#8080ff,,,,,,">
+@@ -314,13 +312,13 @@ posを踏むとイベント開始。</comment>
+ 		<comment>♂
+ 
+ メッセージ表示後、主人公と向き合い
+-msg_d27r0101_doctor_01表示。</comment>
+-		<language name="日本語" width="216">ふむう……！　ポケモンも
+-ポケモンずかんが　きに　なるのか▼
+-たしかに　どう　きろく　されているか
+-きに　なるかも　しれんな▼
+-だが　だいじな　もの　なんでな
+-かえしておくれ</language>
++msg_d27r0101_doctor_01表示。
++Translator's note: I have translated "Pokémon book" as "Pokédex".</comment>
++		<language name="日本語" width="216">Hmmmm!▼
++You like Pokémon, do you? I am looking
++for somebody to help me by filling this▼
++Pokédex, but it is a task not to be
++taken lightly...</language>
+ 	</row>
+ 
+ 	<row id="msg_d27r0101_doctor_04" text-color="#000000,,,#000000,,#000000,#000000,#000000,,,#000000,#000000,">
+@@ -334,16 +332,16 @@ msg_d27r0101_doctor_05を表示しつつ
+ ・ヒノコザル→msg_d27r0101_doctor_07
+ ・ウミオウジ→msg_d27r0101_doctor_08
+ キャンセルなし</comment>
+-		<language name="日本語" width="216">というわけだ！　おまえさん
+-ポケモンずかんを　とりもどしてくれ▼
+-すきな　ポケモンを
+-えらんで　いいからな！</language>
++		<language name="日本語" width="216">Okay! I will give you this Pokédex,
++for you to fill with Pokémon you find.▼
++I will also entrust you with one of the
++Pokémon in this case.</language>
+ 	</row>
+ 
+ 	<row id="msg_d27r0101_doctor_05" text-color="#000000,,,#000000,,#000000,#000000,#000000,,,#000000,#000000,">
+ 		<comment>選択肢を表示中
+ メッセージウインドウに表示</comment>
+-		<language name="日本語" width="216">どの　ポケモンに　しますか？</language>
++		<language name="日本語" width="216">Which Pokémon would you like to choose？</language>
+ 	</row>
+ 
+ 	<row id="msg_d27r0101_doctor_06" text-color="#000000,,,#000000,,#000000,#000000,#000000,,,#000000,#000000,">
+@@ -354,8 +352,8 @@ msg_d27r0101_doctor_05を表示しつつ
+ はい／いいえの選択肢表示
+ はい　→msg_d27r0101_doctor_10
+ いいえ→msg_d27r0101_doctor_09</comment>
+-		<language name="日本語" width="216">ほう！　くさタイプの　ポケモン
+-ナエガメが　いいのか！？</language>
++		<language name="日本語" width="216">Ah, the grass-type Pokémon!
++You want Turtwig?</language>
+ 	</row>
+ 
+ 	<row id="msg_d27r0101_doctor_07" text-color="#000000,,,#000000,,#000000,#000000,#000000,,,#000000,#000000,">
+@@ -366,8 +364,8 @@ msg_d27r0101_doctor_05を表示しつつ
+ はい／いいえの選択肢表示
+ はい　→msg_d27r0101_doctor_10
+ いいえ→msg_d27r0101_doctor_09</comment>
+-		<language name="日本語" width="216">ふむう！　ほのおの　ポケモン
+-ヒノコザルに　するのだな？</language>
++		<language name="日本語" width="216">Hmm! The fire-type Pokémon!
++You want Chimchar?</language>
+ 	</row>
+ 
+ 	<row id="msg_d27r0101_doctor_08" text-color="#000000,,,#000000,,#000000,#000000,#000000,,,#000000,#000000,">
+@@ -378,15 +376,15 @@ msg_d27r0101_doctor_05を表示しつつ
+ はい／いいえの選択肢表示
+ はい　→msg_d27r0101_doctor_10
+ いいえ→msg_d27r0101_doctor_09</comment>
+-		<language name="日本語" width="216">なるほど！　みずタイプの　ポケモン
+-ウミオウジが　いいのか！</language>
++		<language name="日本語" width="216">So that's it! The water-type Pokémon!
++You want Piplup?</language>
+ 	</row>
+ 
+ 	<row id="msg_d27r0101_doctor_09" text-color="#000000,,,#000000,,#000000,#000000,#000000,,,#000000,#000000,">
+ 		<comment>♂
+ 
+ 再度選択</comment>
+-		<language name="日本語" width="216">では　どの　ポケモンに　するのかね？</language>
++		<language name="日本語" width="216">Then, which Pokémon do you want?</language>
+ 	</row>
+ 
+ 	<row id="msg_d27r0101_doctor_10" text-color="#000000,,,#000000,,#000000,#000000,#000000,,,#000000,#000000,">
+@@ -394,14 +392,12 @@ msg_d27r0101_doctor_05を表示しつつ
+ 1＝ポケモン名
+ 
+ そして野生ポケモンとの戦闘に</comment>
+-		<language name="日本語" width="216">[1:03:トレーナー名:0]は
+-[1:00:ポケモン名:1]を　えらんだ！</language>
++		<language name="日本語" width="216">Lucas chose [1:00:ポケモン名:1]！</language>
+ 	</row>
+ 
+ 	<row id="msg_d27r0101_doctor_11" text-color="#000000,,,#000000,,#000000,#000000,#000000,,,#000000,#000000,">
+ 		<comment>ポケモンとの戦闘後</comment>
+-		<language name="日本語" width="216">[1:03:トレーナー名:0]は
+-[FF:00:色:1]ポケモンずかん[FF:00:色:0]を　てにいれた！</language>
++		<language name="日本語" width="216">Lucas recieved the [FF:00:色:1]Pokédex[FF:00:色:0]！</language>
+ 	</row>
+ 
+ 	<row id="msg_d27r0101_doctor_12" text-color="#000000,,,#000000,,#000000,#000000,#000000,,,#000000,#000000,">
+@@ -410,33 +406,26 @@ msg_d27r0101_doctor_05を表示しつつ
+ ポケモン博士、道路のほうに退場。
+ 動作モデルが画面外に消えると
+ 主人公パパ登場。msg_d27r0101_papa_01表示</comment>
+-		<language name="日本語" width="216">ふむう！▼
+-はじめて　ポケモンと　いっしょに
+-たたかった　わりには▽
+-なかなか　たいした　ものだったぞ！▼
+-その　ポケモンは
+-おまえさんに　プレゼント　しよう！▽
+-たいせつに　かわいがって　やるんだぞ▼
+-では　しつれい　するぞ！</language>
++		<language name="日本語" width="216">Hmm！▼
++For somebody who has never battled with
++Pokémon before, that was quite something!▼
++I'm going to give the Pokémon to you.
++Make sure to treat it with great care.</language>
+ 	</row>
+ 
+ 	<row id="msg_d27r0101_papa_01" text-color="#000000,,,#000000,,#000000,#000000,#000000,,,#000000,#000000,">
+ 		<comment>♂</comment>
+ 		<attribute name="キャラ指定">主人公パパ</attribute>
+-		<language name="日本語" width="216">パパ『[1:03:トレーナー名:0]！
+-いまの　ナナカマドはかせ　じゃないか？▽
+-なにが　あったんだ？▼
++		<language name="日本語" width="216">Lucas!
++Wasn't that Professor Rowan?▼
++What's going on?▼
+ ……　……　……
+ ……　……　……▼
+-なるほどな……
+-それで　ポケモンを　もっているのか▼
+-で　はかせは　また　ポケモンずかんを
+-わすれて　いってしまったんだな▼
+-[1:03:トレーナー名:0]
+-はかせは　Sandgem Townの▽
+-ポケモンけんきゅうじょに　いるはずだ▼
+-さ！　ナナカマドはかせに
+-ポケモンずかんを　とどけてきなさい</language>
++Hmmm, so he gave you the Pokémon.
++Well, because of that, he forgot the▼
++Pokémon case again! He should be in the
++lab in Sandgem Town, you should go there▼
++with your new buddy!</language>
+ 	</row>
+ 
+ 	<row id="msg_d27r0101_papa_02" text-color="#000000,,,#000000,,#000000,#000000,#000000,,,#000000,#000000,">
+-- 
+2.28.0
+

@@ -1,0 +1,74 @@
+#!/bin/bash
+
+PATH=$PATH:/cygdrive/c/Program\ Files/BitKinex/
+
+# This script pulls the latest source code over a webdav share, builds it, and then pushes the build
+# if the compilation was successful. In order to avoid reduncancy while pulling, BitKinex can look
+# at two properties of a file to determine whether it has changed:
+#   - Last modified time.
+#   - Size.
+# Both of these two values must be the same from the host to the guest file in order for BitKinex to
+# skip it, both of which have their own challenges.
+#
+# An issue with time is that the Photon server sends modified times in ISO 8601 format,
+# specifically, in the UTC format, without specifying a timezone. That is, there is a Z at the end
+# of the times, without anything else. So, say the host and the guest are in a given non-UTC
+# timezone, EDT. The host file has its given modified date in EDT. Photon serves up that file with
+# its UTC modified time. When copying the file with BitKinex, it copies it with its UTC time.
+# However, the VM is still running with EDT time! For this reason, running the VM in UTC is
+# preferable.
+#
+# An issue with size is line endings. When I exported the CVS repo using cvs2git, the Git repo that
+# was produced had CRLF line endings. When these files were transferred from the host to the guest,
+# BitKinex converted them *to* CRLF. That's right, it went from CRLF to CRLF, replacing byte
+# sequences of 0D0A with 0D0D0A, increasing file sizes by the number of lines. I alleviated this
+# by forcing binary mode transfers when copying.
+
+# Don't display the info dialog box which asks for confirmation, automatically exit the GUI,
+# overwrite without asking, assume binary files, and skip files based on time and file size.
+BITKINEX_ARGS=(/noinfo /auto_exit /force /binary /skiptmsz)
+SOURCE_NAME=pm_dp_ose
+SOURCE_DIR_WIN=C:\\$SOURCE_NAME
+
+function pull() {
+  echo "Pulling latest source code..."
+  # Tell BitKinex to copy to C:\, because if we do, say, C:\pm_dp_ose, then, whenever this is ran
+  # for a second time, pm_dp_ose will be copied to C:\pm_dp_ose\pm_dp_ose. On Linux, this issue is
+  # generally solved by writing to "C:\pm_dp_ose" rather than "C:\pm_dp_ose\", but this doesn't
+  # seem to help here.
+  bitkinex cp "${BITKINEX_ARGS[@]}" "http://localhost:9843/Documents/Projects/C/dp/$SOURCE_NAME/" \
+    C:\\
+  cd "$(cygpath -u "$SOURCE_DIR_WIN")" || exit 1
+}
+
+function push() {
+  echo "Pushing build."
+  bitkinex cp "${BITKINEX_ARGS[@]}" "$SOURCE_DIR_WIN\bin\ARM9-TS\Release\main.srl" \
+    "http://localhost:9843/Documents/Projects/C/dp/"
+}
+
+function makemsg() {
+  cd convert/message/ && make && cd - || exit 1
+}
+
+function makescript() {
+  cd src/fielddata/script/ && make && cd - || exit 1
+}
+
+function build() {
+  pull
+  echo "Building..."
+  if make; then
+    push
+  fi
+}
+
+function buildall() {
+  pull
+  echo "Building..."
+  makemsg
+  makescript
+  if make; then
+    push
+  fi
+}

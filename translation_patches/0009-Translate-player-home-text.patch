@@ -1,0 +1,68 @@
+From 5cf28eff61f73180a4fe4fd22166958089700404 Mon Sep 17 00:00:00 2001
+From: Koopa <codingkoopa@gmail.com>
+Date: Fri, 14 Aug 2020 19:56:15 -0400
+Subject: [PATCH] Translate player home text.
+
+---
+ .../convert/message/src/scenario/t01r0101.gmm | 31 +++++++++----------
+ 1 file changed, 15 insertions(+), 16 deletions(-)
+
+diff --git a/pm_dp_ose/convert/message/src/scenario/t01r0101.gmm b/pm_dp_ose/convert/message/src/scenario/t01r0101.gmm
+index 5639d29fa..5f511a682 100755
+--- a/pm_dp_ose/convert/message/src/scenario/t01r0101.gmm
++++ b/pm_dp_ose/convert/message/src/scenario/t01r0101.gmm
+@@ -271,8 +271,8 @@
+ 
+ 0＝主人公名前</comment>
+ 		<attribute name="キャラ指定">主人公母親</attribute>
+-		<language name="日本語" width="216">ママ『おはよう！　[1:03:トレーナー名:0]
+-なんだか　うれしそうね！</language>
++		<language name="日本語" width="216">Good morning Lucas!
++You look happy today!</language>
+ 	</row>
+ 
+ 	<row id="msg_t01r0101_mama_02">
+@@ -282,13 +282,13 @@
+ msg_t01r0101_mama_01表示後
+ 主人公に隣接してメッセージ表示</comment>
+ 		<attribute name="キャラ指定">主人公母親</attribute>
+-		<language name="日本語" width="216">そうだ！　みずうみに　いる
+-パパを　よんできて　ほしいの！▼
+-みずうみ　には　いけるでしょ
+-この　まちを　でて▽
+-まっすぐ　すすむ　だけだもんね▼
+-あっ　くさむらには　はいらないでよ
+-やせいの　ポケモン　とびだすから</language>
++		<language name="日本語" width="216">Oh, that's right!
++I need you to go see your father at the▼
++lake. You remember how to get there,
++right? You can go out of this town and▼
++go straight to it. Just make sure you 
++stay out of the grass, you don't want to▼
++run into wild Pokémon!</language>
+ 	</row>
+ 
+ 	<row id="msg_t01r0101_mama_03">
+@@ -297,13 +297,12 @@ msg_t01r0101_mama_01表示後
+ 
+ msg_t01r0101_mama_02表示後、繰り返し</comment>
+ 		<attribute name="キャラ指定">主人公母親</attribute>
+-		<language name="日本語" width="216">ママ『みずうみに　いる
+-パパを　よんできて　ほしいの！▼
+-みずうみ　には　いけるでしょ
+-この　まちを　でて▽
+-まっすぐ　すすむ　だけだもん▼
+-あっ　くさむらには　はいらないでよ
+-やせいの　ポケモン　とびだすから</language>
++		<language name="日本語" width="216">I need you to go see your father at the
++lake. You remember how to get there,▼
++right? You can go out of this town and
++go straight to it. Just make sure you▼
++stay out of the grass, you don't want to
++run into wild Pokémon!</language>
+ 	</row>
+ 
+ 	<flowchart-group-list>
+-- 
+2.28.0
+

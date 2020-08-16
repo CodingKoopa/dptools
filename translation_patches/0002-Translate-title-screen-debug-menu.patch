@@ -1,0 +1,55 @@
+From 03aa059c46cef9955a5d402884e5e59e988fc5ae Mon Sep 17 00:00:00 2001
+From: Koopa <codingkoopa@gmail.com>
+Date: Mon, 3 Aug 2020 15:18:24 -0400
+Subject: [PATCH] Translate title screen debug menu.
+
+---
+ .../convert/message/src/debug/debug_title.gmm      | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+diff --git a/pm_dp_ose/convert/message/src/debug/debug_title.gmm b/pm_dp_ose/convert/message/src/debug/debug_title.gmm
+index 50e695eea..6815e7b9a 100755
+--- a/pm_dp_ose/convert/message/src/debug/debug_title.gmm
++++ b/pm_dp_ose/convert/message/src/debug/debug_title.gmm
+@@ -260,31 +260,31 @@
+ 
+ 
+ 	<row id="DT_DEBUGGAME">
+-		<language name="日本語">デバッグかいし</language>
++		<language name="日本語">Debug Game</language>
+ 	</row>
+ 
+ 	<row id="DT_CONTINUE">
+-		<language name="日本語">つづきから</language>
++		<language name="日本語">Continue</language>
+ 	</row>
+ 
+ 	<row id="DT_OPENING">
+-		<language name="日本語">オープニング</language>
++		<language name="日本語">Opening</language>
+ 	</row>
+ 
+ 	<row id="DT_SOUNDTEST">
+-		<language name="日本語">サウンドテスト</language>
++		<language name="日本語">Sound Test</language>
+ 	</row>
+ 
+ 	<row id="DT_POKEGRATEST">
+-		<language name="日本語">ポケモングラフィック</language>
++		<language name="日本語">Pokémon Test</language>
+ 	</row>
+ 
+ 	<row id="DT_MODORU">
+-		<language name="日本語">もどる</language>
++		<language name="日本語">Back</language>
+ 	</row>
+ 
+ 	<row id="DT_DEBUGFIGHT">
+-		<language name="日本語">デバッグファイト</language>
++		<language name="日本語">Debug Fight</language>
+ 	</row>
+ 
+ 	<flowchart-group-list>
+-- 
+2.28.0
+

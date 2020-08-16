@@ -1,0 +1,75 @@
+From 00064487cacc033186ca8624f30aa569cd34e92e Mon Sep 17 00:00:00 2001
+From: Koopa <codingkoopa@gmail.com>
+Date: Fri, 14 Aug 2020 19:52:25 -0400
+Subject: [PATCH] Translate Twinleaf Town text.
+
+---
+ .../convert/message/src/scenario/t01.gmm      | 32 +++++++++----------
+ 1 file changed, 15 insertions(+), 17 deletions(-)
+
+diff --git a/pm_dp_ose/convert/message/src/scenario/t01.gmm b/pm_dp_ose/convert/message/src/scenario/t01.gmm
+index 5e61cdaea..81027d802 100755
+--- a/pm_dp_ose/convert/message/src/scenario/t01.gmm
++++ b/pm_dp_ose/convert/message/src/scenario/t01.gmm
+@@ -299,20 +299,20 @@ posを踏むとイベント発動
+ pos1　……　t01とr201の間
+ pos2　……　主人公の家の前</comment>
+ 		<attribute name="キャラ指定">ポケモン博士</attribute>
+-		<language name="日本語" width="216">うむ！　いそいでいた　とはいえ
+-もうしわけない　ことを　した！▼
+-ケガは　ないかな？
+-うむ！　ないようだな　よかった！▼
+-では　しつれい　するよ</language>
++		<language name="日本語" width="216">Oh! I shouldn't have been rushing,
++sorry! Are you okay?▼
++Ah, good, good.
++Please forgive me.</language>
+ 	</row>
+ 
+ 	<row id="msg_t01_mama_01" text-color="#ff0000,,,#ff0000,,#ff0000,#ff0000,,,,,,">
+ 		<comment>♀
+ 画面上部を見ながらメッセージ表示。
+-その後、主人公をみてmsg_t01_mama_02</comment>
++その後、主人公をみてmsg_t01_mama_02
++Translator's note: Rowan is internally referred to as "doctor". I've chosen to translate it as professor.</comment>
+ 		<attribute name="キャラ指定">主人公ママ</attribute>
+-		<language name="日本語" width="216">はかせ！
+-はかせ　ってば！</language>
++		<language name="日本語" width="216">Professor!
++Professor, wait!</language>
+ 	</row>
+ 
+ 	<row id="msg_t01_mama_02" text-color="#ff0000,,,#ff0000,,#ff0000,#ff0000,,,,,,">
+@@ -320,13 +320,12 @@ pos2　……　主人公の家の前</comment>
+ 
+ 続けて
+ msg_t01_mama_03</comment>
+-		<language name="日本語" width="216">ママ『まいったな！▼
+-ナナカマドはかせ　ったら　うちに
+-ポケモンずかんを　わすれて……▼
+-[1:03:トレーナー名:0]　わるいけど
+-この　ポケモンずかん　とどけてきて？▼
+-ナナカマドはかせ
+-みずうみに　いくって　いってたから</language>
++		<language name="日本語" width="216">Oh, that forgetful Rowan, he left his
++things here...▼
++Lucas, would you mind taking this case
++and delivering it to him?▼
++He said that he was going to the lake.
++</language>
+ 	</row>
+ 
+ 	<row id="msg_t01_mama_03" text-color="#ff0000,,,#ff0000,,#ff0000,#ff0000,,,,,,">
+@@ -334,8 +333,7 @@ msg_t01_mama_03</comment>
+ 
+ 続けて
+ msg_t01_mama_04</comment>
+-		<language name="日本語" width="216">[1:03:トレーナー名:0]は
+-[FF:00:色:1]ポケモンずかん[FF:00:色:0]を　てにいれた！</language>
++		<language name="日本語" width="216">Lucas recieved the [FF:00:色:1]Pokémon Case[FF:00:色:0]！</language>
+ 	</row>
+ 
+ 	<row id="msg_t01_mama_04" text-color="#ff0000,,,#ff0000,,#ff0000,,,,,,,">
+-- 
+2.28.0
+

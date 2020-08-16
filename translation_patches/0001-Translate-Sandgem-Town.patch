@@ -1,0 +1,129 @@
+From 9e4f9c27ef269a042a07f1183852aae56d33ec09 Mon Sep 17 00:00:00 2001
+From: Koopa <codingkoopa@gmail.com>
+Date: Mon, 3 Aug 2020 15:18:08 -0400
+Subject: [PATCH] Translate "Sandgem Town".
+
+---
+ pm_dp_ose/convert/message/src/place_name.gmm        | 2 +-
+ pm_dp_ose/convert/message/src/scenario/c02.gmm      | 2 +-
+ pm_dp_ose/convert/message/src/scenario/d27r0101.gmm | 4 ++--
+ pm_dp_ose/convert/message/src/scenario/r201.gmm     | 4 ++--
+ pm_dp_ose/convert/message/src/scenario/r202.gmm     | 2 +-
+ pm_dp_ose/convert/message/src/scenario/t02.gmm      | 2 +-
+ pm_dp_ose/convert/message/src/townmap.gmm           | 4 ++--
+ 7 files changed, 10 insertions(+), 10 deletions(-)
+
+diff --git a/pm_dp_ose/convert/message/src/place_name.gmm b/pm_dp_ose/convert/message/src/place_name.gmm
+index 5166bfe8f..fbf34c9ca 100755
+--- a/pm_dp_ose/convert/message/src/place_name.gmm
++++ b/pm_dp_ose/convert/message/src/place_name.gmm
+@@ -268,7 +268,7 @@
+ 	</row>
+ 
+ 	<row id="MAPNAME_T2MASAGO">
+-		<language name="日本語">マサゴタウン</language>
++		<language name="日本語">Sandgem Town</language>
+ 	</row>
+ 
+ 	<row id="MAPNAME_T3SONOO">
+diff --git a/pm_dp_ose/convert/message/src/scenario/c02.gmm b/pm_dp_ose/convert/message/src/scenario/c02.gmm
+index 192539632..c91564f02 100755
+--- a/pm_dp_ose/convert/message/src/scenario/c02.gmm
++++ b/pm_dp_ose/convert/message/src/scenario/c02.gmm
+@@ -269,7 +269,7 @@
+ 		<attribute name="キャラ指定">太ったお兄さん</attribute>
+ 		<language name="日本語" width="216">なんだ？　ふくが
+ すこし　ぬれてるぞ？▼
+-マサゴタウンの　うみで
++Sandgem Townの　うみで
+ みずあそび　でも　してきたのか？</language>
+ 	</row>
+ 
+diff --git a/pm_dp_ose/convert/message/src/scenario/d27r0101.gmm b/pm_dp_ose/convert/message/src/scenario/d27r0101.gmm
+index 63b1829b1..11dbb37ba 100755
+--- a/pm_dp_ose/convert/message/src/scenario/d27r0101.gmm
++++ b/pm_dp_ose/convert/message/src/scenario/d27r0101.gmm
+@@ -433,7 +433,7 @@ msg_d27r0101_doctor_05を表示しつつ
+ で　はかせは　また　ポケモンずかんを
+ わすれて　いってしまったんだな▼
+ [1:03:トレーナー名:0]
+-はかせは　マサゴタウンの▽
++はかせは　Sandgem Townの▽
+ ポケモンけんきゅうじょに　いるはずだ▼
+ さ！　ナナカマドはかせに
+ ポケモンずかんを　とどけてきなさい</language>
+@@ -444,7 +444,7 @@ msg_d27r0101_doctor_05を表示しつつ
+ 
+ msg_d27r0101_papa_01表示後
+ t02に入るまで、繰り返し</comment>
+-		<language name="日本語" width="216">パパ『はかせは　マサゴタウンに　いる▼
++		<language name="日本語" width="216">パパ『はかせは　Sandgem Townに　いる▼
+ おまえも　ポケモンを　もらったなら
+ そこまで　いけるだろう▼
+ さ！　ナナカマドはかせに
+diff --git a/pm_dp_ose/convert/message/src/scenario/r201.gmm b/pm_dp_ose/convert/message/src/scenario/r201.gmm
+index 29fe6e5a1..69acf09f5 100755
+--- a/pm_dp_ose/convert/message/src/scenario/r201.gmm
++++ b/pm_dp_ose/convert/message/src/scenario/r201.gmm
+@@ -313,7 +313,7 @@ posで発動
+ 戦闘後メッセージ（フィールド）
+ 0＝ライバル名前
+ 
+-メッセージ表示後、マサゴタウン（→方向）に退場。
++メッセージ表示後、Sandgem Town（→方向）に退場。
+ 動作モデルが見えなくなると、主人公操作可能に。</comment>
+ 		<attribute name="キャラ指定">ライバル</attribute>
+ 		<language name="日本語" width="216">[1:03:トレーナー名:0]『チクショー！
+@@ -382,7 +382,7 @@ No017「キズぐすり」をくれる（１回）</comment>
+ タウンマップ看板は１行最大１４文字</comment>
+ 		<attribute name="キャラ指定">看板：道路</attribute>
+ 		<language name="日本語" font=" 1:font_system" width="216">ここは　２０１ばん　どうろ
+-→　マサゴタウン</language>
++→　Sandgem Town</language>
+ 	</row>
+ 
+ 	<flowchart-group-list>
+diff --git a/pm_dp_ose/convert/message/src/scenario/r202.gmm b/pm_dp_ose/convert/message/src/scenario/r202.gmm
+index d4ea285c1..8581af92e 100755
+--- a/pm_dp_ose/convert/message/src/scenario/r202.gmm
++++ b/pm_dp_ose/convert/message/src/scenario/r202.gmm
+@@ -384,7 +384,7 @@ No004「モンスターボール」×５（仮）</comment>
+ 		<comment>捕獲デモ終了後、フィールドに復帰して</comment>
+ 		<attribute name="キャラ指定">看板：道路</attribute>
+ 		<language name="日本語" width="216">ここは　２０２ばん　どうろ
+-↓　マサゴタウン</language>
++↓　Sandgem Town</language>
+ 	</row>
+ 
+ 	<row id="msg_r202_sign2_01">
+diff --git a/pm_dp_ose/convert/message/src/scenario/t02.gmm b/pm_dp_ose/convert/message/src/scenario/t02.gmm
+index 679ca1b3a..5d59e7274 100755
+--- a/pm_dp_ose/convert/message/src/scenario/t02.gmm
++++ b/pm_dp_ose/convert/message/src/scenario/t02.gmm
+@@ -412,7 +412,7 @@ No453「たんけんセット」入手</comment>
+ 		<comment>看板分類：タウンマップ
+ タウンマップ看板は１行最大１４文字</comment>
+ 		<attribute name="キャラ指定">看板：街</attribute>
+-		<language name="日本語" font=" 1:font_system" width="216">ここは　マサゴタウン
++		<language name="日本語" font=" 1:font_system" width="216">ここは　Sandgem Town
+ うみにつながる　すなのまち</language>
+ 	</row>
+ 
+diff --git a/pm_dp_ose/convert/message/src/townmap.gmm b/pm_dp_ose/convert/message/src/townmap.gmm
+index 25ee1617c..ba3f96ca6 100755
+--- a/pm_dp_ose/convert/message/src/townmap.gmm
++++ b/pm_dp_ose/convert/message/src/townmap.gmm
+@@ -304,8 +304,8 @@
+ 	</row>
+ 
+ 	<row id="mes_guide_t2_01_01">
+-		<comment>マサゴタウンのガイドメッセージ。</comment>
+-		<language name="日本語" font=" 1:font_system" width="240">マサゴタウンようの　テストメッセージです</language>
++		<comment>Sandgem Townのガイドメッセージ。</comment>
++		<language name="日本語" font=" 1:font_system" width="240">Sandgem Townようの　テストメッセージです</language>
+ 	</row>
+ 
+ 	<row id="mes_guide_t3_01_01">
+-- 
+2.28.0
+

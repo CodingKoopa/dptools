@@ -1,0 +1,54 @@
+From ab8e133e4ad21d8beda4db59a619d31f5af4fa7e Mon Sep 17 00:00:00 2001
+From: Koopa <codingkoopa@gmail.com>
+Date: Fri, 14 Aug 2020 19:57:26 -0400
+Subject: [PATCH] Translate window text.
+
+---
+ pm_dp_ose/convert/message/src/scenario/ev_win.gmm | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+diff --git a/pm_dp_ose/convert/message/src/scenario/ev_win.gmm b/pm_dp_ose/convert/message/src/scenario/ev_win.gmm
+index c92a54e8b..6159c2f7b 100755
+--- a/pm_dp_ose/convert/message/src/scenario/ev_win.gmm
++++ b/pm_dp_ose/convert/message/src/scenario/ev_win.gmm
+@@ -549,12 +549,12 @@ msg_c01r0101_board_02表示後</comment>
+ 
+ 	<row id="msg_ev_win_046">
+ 		<comment>各種</comment>
+-		<language name="日本語" font=" 1:font_system" width="216">はい</language>
++		<language name="日本語" font=" 1:font_system" width="216">Yes</language>
+ 	</row>
+ 
+ 	<row id="msg_ev_win_047">
+ 		<comment>各種</comment>
+-		<language name="日本語" font=" 1:font_system" width="216">いいえ</language>
++		<language name="日本語" font=" 1:font_system" width="216">No</language>
+ 	</row>
+ 
+ 	<row id="msg_ev_win_048">
+@@ -625,19 +625,19 @@ msg_c01r0101_board_02表示後</comment>
+ 	<row id="msg_ev_win_061">
+ 		<comment>最初の３体
+ ポケNo402</comment>
+-		<language name="日本語" font=" 1:font_system" width="216">ナエガメ</language>
++		<language name="日本語" font=" 1:font_system" width="216">Turtwig</language>
+ 	</row>
+ 
+ 	<row id="msg_ev_win_062">
+ 		<comment>最初の３体
+ ポケNo403</comment>
+-		<language name="日本語" font=" 1:font_system" width="216">ヒノコザル</language>
++		<language name="日本語" font=" 1:font_system" width="216">Chimchar</language>
+ 	</row>
+ 
+ 	<row id="msg_ev_win_063">
+ 		<comment>最初の３体
+ ポケNo404</comment>
+-		<language name="日本語" font=" 1:font_system" width="216">ウミオウジ</language>
++		<language name="日本語" font=" 1:font_system" width="216">Piplup</language>
+ 	</row>
+ 
+ 	<row id="msg_ev_win_064">
+-- 
+2.28.0
+

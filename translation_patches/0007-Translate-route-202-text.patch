@@ -1,0 +1,71 @@
+From f181218e20e3e5b0250a378a3b759e96c845afce Mon Sep 17 00:00:00 2001
+From: Koopa <codingkoopa@gmail.com>
+Date: Fri, 14 Aug 2020 19:51:43 -0400
+Subject: [PATCH] Translate route 202 text.
+
+---
+ .../convert/message/src/scenario/r202.gmm     | 34 +++++++------------
+ 1 file changed, 12 insertions(+), 22 deletions(-)
+
+diff --git a/pm_dp_ose/convert/message/src/scenario/r202.gmm b/pm_dp_ose/convert/message/src/scenario/r202.gmm
+index 8581af92e..338ab0800 100755
+--- a/pm_dp_ose/convert/message/src/scenario/r202.gmm
++++ b/pm_dp_ose/convert/message/src/scenario/r202.gmm
+@@ -281,12 +281,10 @@ posイベント（＝t02近く）
+ 0＝サポート名「ヒカリ」
+ 1＝主人公名前</comment>
+ 		<attribute name="キャラ指定">サポート♀</attribute>
+-		<language name="日本語" width="216">[1:03:トレーナー名:0]『[1:03:トレーナー名:1]さん！
+-ポケモン　１ひきでは
+-とおくに　いくのは　たいへん　ですよ▼
+-あたしが　じっさいに
+-ポケモンを　つかまえますから▽
+-そこで　みていてくださいね！</language>
++		<language name="日本語" width="216">Oh, Lucas！
++It will be hard for you to get by with▼
++just one Pokémon. Let me show you how to
++catch Pokémon!</language>
+ 	</row>
+ 
+ 	<row id="msg_r202_heroine_02">
+@@ -297,17 +295,11 @@ posイベント（＝t02近く）
+ 
+ 表示後、アイテム入手処理
+ No004「モンスターボール」×５（仮）</comment>
+-		<language name="日本語" width="216">うまく　いきました！▼
+-ポイントは　ポケモンの
+-たいりょくを　へらすこと　です▼
+-げんきな　ポケモンは
+-つかまえるのが　むずかしいですから▼
+-あとは　ポケモンの　わざで
+-ねむらせたりすると▽
+-もっと　つかまえやすく　なりますよ▼
+-[1:03:トレーナー名:0]さん！
+-これを　おわたし　するので▽
+-ポケモン　つかまえてくださいね！</language>
++		<language name="日本語" width="216">It worked!▼
++The idea is, you have to reduce the
++Pokémon's health points. It'll be hard to▼
++catch Pokémon which are at full health.
++Here, I'll give you this to get started.</language>
+ 	</row>
+ 
+ 	<row id="msg_r202_heroine_03">
+@@ -315,11 +307,9 @@ No004「モンスターボール」×５（仮）</comment>
+ 
+ 上記メッセージ表示後、画面上部の方に移動
+ 動作モデルが消えると、操作可能に。</comment>
+-		<language name="日本語" width="216">ポケモンが　たくさん　いると
+-とおくに　いくのも　あんしんです！▽
+-それに　にぎやかで　たのしいし▼
+-それでは　あたし
+-さきに　いきますね！</language>
++		<language name="日本語" width="216">You'll get into it when you start
++catching them. It's fun!▼
++I'll be heading off now, good luck!</language>
+ 	</row>
+ 
+ 	<row id="msg_r202_hero_01">
+-- 
+2.28.0
+
