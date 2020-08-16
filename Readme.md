@@ -53,4 +53,4 @@ git apply $PATH_TO_DPTOOLS/general_patches/*.patch
 #### Modifying the code
 This section gives some tips on modifying the code:
 - Create a new branch from the 1st prototype commit, to work off of.
-- You may have to manually re-`make` things sometimes. For instance, when editing the source files for scripts and text, they do not seem to get rebuilt automatically. [scripts/.bash-rc](scripts/.bash-rc) works around this by adding convenience functions to rebuild them unconditionally (accessed with `buildall`).
+- You may have to manually re-`make` things sometimes. For instance, when editing the source files for scripts and text, they do not seem to get rebuilt automatically. [`scripts/.bash-rc`](scripts/.bash-rc) works around this by adding convenience functions to rebuild them unconditionally (accessed with `buildall`).

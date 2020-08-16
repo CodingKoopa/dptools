@@ -38,4 +38,4 @@ This was okay.
 - The text `msg_t02r0101_oldwoman1a_01` is interesting, as it is for an old woman who is not in the final game. However, her text does not automatically translate well at all, and I don't have anything in the final game to work off of, so I have neglected to translate this one in particular.
 
 ### Route 202
-The catching tutorial is mentioened by the original text, even though it is not implemented ingame. I have kept this.
+The catching tutorial is mentioned by the original text, even though it is not implemented ingame. I have kept this.
