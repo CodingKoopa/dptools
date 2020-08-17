@@ -1,5 +1,5 @@
 # dptools
-This repository contains tools and notes for working with the leaked source code repositories for PokÃ©mon Diamond and Pearl, mostly the prototype.
+This repository contains tools and notes for working with the leaked source code repositories for Pokémon Diamond and Pearl, mostly the prototype.
 
 ## Contents
 - [`14032006`](14032006): Patches for the March 14th, 2006 source.
