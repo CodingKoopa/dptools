@@ -2,8 +2,7 @@
 This repository contains tools and notes for working with the leaked source code repositories for Pokémon Diamond and Pearl, mostly the prototype.
 
 ## Contents
-- [`general_patches`](general_patches): General patches for building and using the prototype.
-- [`translation_patches`](translation_patches): Patches which translate the prototype.
+- [`14032006`](14032006): Patches for the March 14th, 2006 source.
 - [`scripts`](scripts): Scripts made for working with this repository and the prototype.
 
 ## Setup
@@ -39,15 +38,15 @@ See [here](https://www.mcs.anl.gov/~jacob/cvs2svn/cvs2git.html) and [here](https
 
 #### Using and patching the prototype
 1. Make a copy of `pm_dp_ose/include/library/spl*`. It will be needed to compile.
-2. Using `git log` and `G` to go to the end of the pager, find the commit "The 1st prototype was completed.", and `git checkout` to it.
+2. Using `git log` and `G` to go to the end of the pager, find the commit you want to work with (see the readmes for details), and `git checkout` to it.
 3. Copy the SPL headers to `pm_dp_ose/include/library/`
-3. Clone this repository.
+4. Clone this repository.
 ```sh
 git clone https://gitlab.com/CodingKoopa/dptools.git
 ```
 4. Apply whatever patches you want, e.g. (from the DP source code directory):
 ```sh
-git apply $PATH_TO_DPTOOLS/general_patches/*.patch
+git apply $PATH_TO_DPTOOLS/14032006/general_patches/*.patch
 ```
 
 #### Modifying the code
