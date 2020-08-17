@@ -486,7 +486,7 @@ def decode(args):
     array_contents = re.search("{(.+)}", array).group(1)
   except AttributeError:
     array_contents = array
-  encoded_str = re.split(",", array_contents)
+  encoded_str = re.split(",", array_contents.strip())
   decoded_str = ""
   for char in encoded_str:
     if char != "EOM_":
