@@ -1,5 +1,5 @@
 # dptools
-This repository contains tools and notes for working with the leaked source code repositories for Pokémon Diamond and Pearl, mostly the prototype.
+This repository contains tools and notes for working with the leaked source code repositories for PokÃ©mon Diamond and Pearl, mostly the prototype.
 
 ## Contents
 - [`14032006`](14032006): Patches for the March 14th, 2006 source.
@@ -13,6 +13,7 @@ This section will describe how to setup the leaked source code to compile and ha
 - The easybuild package, for the SDK, Unix tools, and compiler.
   - This too comes with the source code, already checked out to a late point in development. This is different from the earlier prototype version that this repository assumes.
   - If you're a sucker for pain, you can try hunting down NitroSDK, NitroSystem, the Codewarriors DS compiler, and old versions of the Cygwin tools used (modern tools don't seem to really work), in place of easybuild.
+    - [This](https://gist.github.com/rlaPHOENiX/35990ea71c43b26158b393c25dc3ece9) guide can help you with this.
 - A Windows XP system.
   - I've documented my setup for this [here](https://gitlab.com/CodingKoopa/comet-observatory/-/blob/master/docs/QEMU%20Notes.md#windows-xp).
   - I've been told that there are distributions of whole VirtualBox images out there, with easybuild included and ready to go. Isn't technology amazing?
