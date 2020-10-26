@@ -1,15 +1,16 @@
 # dptools
-This repository contains tools and notes for working with the leaked source code repositories for Pokémon Diamond and Pearl, mostly the prototype.
+This repository contains tools and notes for working with the source code repositories for Pokémon Diamond and Pearl, with the intent of preserving their history.
 
 ## Contents
 - [`14032006`](14032006): Patches for the March 14th, 2006 source.
 - [`scripts`](scripts): Scripts made for working with this repository and the prototype.
 
 ## Setup
-This section will describe how to setup the leaked source code to compile and hack on the prototype.
+This section will describe how to setup the source code to compile and hack on the prototype.
 
 ### Prerequisites
-- The original leaked CVS repository, for the source code.
+To build the prototype, you need:
+- The original CVS repository, for the source code.
 - The easybuild package, for the SDK, Unix tools, and compiler.
   - This too comes with the source code, already checked out to a late point in development. This is different from the earlier prototype version that this repository assumes.
   - If you're a sucker for pain, you can try hunting down NitroSDK, NitroSystem, the Codewarriors DS compiler, and old versions of the Cygwin tools used (modern tools don't seem to really work), in place of easybuild.
