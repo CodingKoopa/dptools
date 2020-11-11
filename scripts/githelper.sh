@@ -10,7 +10,7 @@ print_help() {
   # highlighting.
   HELP_STRING="
 Usage: $0 {subcommand}
-Manages patches.
+Manages the DP source code repository.
 
 Subcommands:
   help
@@ -20,6 +20,8 @@ Shows the Git log for the DP source code repository, for picking out commit hash
   exp <directory> <start commit SHA> [end commit SHA]
 Exports the range of commits to the directory specified, taking into consideration any existing
 patches.
+  rest <file path> [directory]
+Restores all of the revisions of the file specified to the given directory.
 "
   echo "$HELP_STRING"
   return 0
@@ -82,7 +84,51 @@ function exp() {
   fi
 }
 
-# Entrypoint for patchmgr. Runs the specified subcommand function.
+# Restores the revisions of a file.
+# Globals Read:
+#   - common_git_args: Common Git arguments.
+#   - dp_path: The path to the DP source repo.
+# Arguments:
+#   - File to restore, relative to the root of the DP repo.
+#   - Directory to restore into.
+function rest() {
+  local -r file=$1
+  local output_directory=$2
+
+  local -r file_basename=$(basename "$file")
+  if [[ -z $output_directory ]]; then
+    output_directory=$file_basename
+  fi
+  mkdir -p "$output_directory"
+
+  # Use "|" as a delimiter that we'll use to extract information.
+  if ! commit_list=$(git "${common_git_args[@]}" log --follow --format="%H|%ad" --date=short \
+    -- "$file"); then
+    echo "Failed to get commit list for file: $commit_list."
+    return 1
+  fi
+  if [[ -z $commit_list ]]; then
+    echo "Commit list looks empty, something went wrong."
+    return 1
+  fi
+
+  while IFS= read -r line; do
+    local commit
+    commit=$(echo "$line" | cut -d\| -f1)
+    local date
+    date=$(echo "$line" | cut -d\| -f2)
+    local output_file=${date}_$file_basename
+
+    echo "Saving commit $commit to \"$output_file\"."
+    git "${common_git_args[@]}" restore -s "$commit" -- "$file"
+    cp "$dp_path"/"$file" "$output_directory/$output_file"
+  done <<<"$commit_list"
+
+  # Uncomment for archive creation.
+  7z a "$file_basename".7z -m0=lzma -mx=9 -mfb=64 -md=32m -mqs "$output_directory"
+}
+
+# Entrypoint for githelper. Runs the specified subcommand function.
 # Arguments:
 #   - Subcommand to run.
 #   - Subcommand arguments.
@@ -90,10 +136,10 @@ function exp() {
 #   - Subcommand output.
 # Returns:
 #   - Subcommand return.
-function patchmgr() {
+function githelper() {
   function=$1
   shift
-  echo "patchmgr!"
+  echo "githelper!"
 
   # For the subcommands, we would like to assume that we are in the root of the dptools directory.
   return_to_scripts=false
@@ -126,6 +172,9 @@ function patchmgr() {
   "exp"*)
     exp "$@"
     ;;
+  "rest"*)
+    rest "$@"
+    ;;
   *)
     print_help
     ;;
@@ -136,4 +185,4 @@ function patchmgr() {
   fi
 }
 
-patchmgr "$@"
+githelper "$@"
