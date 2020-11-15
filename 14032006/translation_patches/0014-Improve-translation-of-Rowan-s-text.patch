@@ -1,0 +1,28 @@
+From 01bccfb6a0337be6116e167403d1dd4c971abbb3 Mon Sep 17 00:00:00 2001
+From: Koopa <codingkoopa@gmail.com>
+Date: Sat, 14 Nov 2020 22:43:10 -0500
+Subject: [PATCH] Improve translation of Rowan's text.
+
+---
+ pm_dp_ose/convert/message/src/scenario/t02r0101.gmm | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/pm_dp_ose/convert/message/src/scenario/t02r0101.gmm b/pm_dp_ose/convert/message/src/scenario/t02r0101.gmm
+index 6c96a9a3f..6033a0ac2 100755
+--- a/pm_dp_ose/convert/message/src/scenario/t02r0101.gmm
++++ b/pm_dp_ose/convert/message/src/scenario/t02r0101.gmm
+@@ -284,8 +284,9 @@ amazing device!</language>
+ ポケモン図鑑入手処理後に表示</comment>
+ 		<attribute name="キャラ指定">ポケモン博士</attribute>
+ 		<language name="日本語" width="216">I was hoping to get your father
+-to help you, but he has his job with the▼
+-water, so I'm asking you.</language>
++to help you, but he's got that job of▼
++monitoring the lakes,
++so I'm asking you.</language>
+ 	</row>
+ 
+ 	<row id="msg_t02r0101_doctor_03">
+-- 
+2.29.2
+
